@@ -12,9 +12,7 @@
 1. `analyze/change_tendency.py` to analyze the alignment & divergence and sentiment proximity
 
 
-
-"""
-Explanation:
+```
 1. **Alignment and Divergence Over Time**: This plot shows the cosine distance between key terms over time. 
    - The distance between "China" and "cooperation" represents how aligned these two terms are in the word embedding space.
    - The distance between "America" and "conflict" represents how closely associated these terms are.
@@ -24,4 +22,4 @@ Explanation:
    - "China Sentiment Proximity" is the average cosine similarity between "China" and sentiment words like "positive," "negative," "war," and "peace."
    - "America Sentiment Proximity" represents the same for "America."
    - Higher sentiment proximity indicates a stronger association between these countries and the sentiment-related terms.
-"""
+```
