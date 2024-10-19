@@ -1,7 +1,7 @@
 from gensim.models import Word2Vec
 
 
-model_path = '/data/align-anything/boyuan/core_workspace/china_america_analysis/training/word2vec_model_year_1990.model'
+model_path = '/data/align-anything/boyuan/core_workspace/china_america_analysis/training/models/word2vec_model_year_2015.model'
 model = Word2Vec.load(model_path)
 print("Model loaded successfully!")
 
@@ -36,8 +36,8 @@ else:
 
 # NOTE 3 Analogy Reasoning
 log('Task3: Analogy Reasoning...')
-positive = ['paris', 'germany']
-negative = ['france']
+positive = ['paris', 'france']
+negative = ['berlin']
 if all(word in model.wv for word in positive + negative):
     result = model.wv.most_similar(positive=positive, negative=negative, topn=1)
     print(f"'{positive[0]}' is to '{positive[1]}' as '{negative[0]}' is to '{result[0][0]}'")

@@ -108,7 +108,7 @@ def main(args):
         "window": args.window,
         "min_count": args.min_count,
         "epochs": args.epochs
-    }, name=args.run_name)
+    }, name=args.run_name + args.year)
 
     sentences = load_data(args.input_file)
     train_sentences, val_sentences = train_test_split(sentences, test_size=0.2, random_state=42)
